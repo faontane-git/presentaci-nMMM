@@ -31,7 +31,9 @@ const Features = () => {
   return (
     <section className="bg-gray-50 py-20 px-6">
       <div className="max-w-6xl mx-auto text-center mb-16">
-        <h2 className="text-4xl font-extrabold text-gray-800 mb-4">¿Qué te ofrece Mi Iglesia MMM?</h2>
+        <h2 className="text-4xl font-extrabold text-gray-800 mb-4">
+          ¿Qué te ofrece <span className="text-blue-500 whitespace-nowrap">Mi Iglesia MMM</span>?
+        </h2>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
           Una app pensada para acercarte más a Dios, mantenerte conectado con tu congregación y vivir tu fe cada día.
         </p>
@@ -51,7 +53,7 @@ const Features = () => {
               />
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-semibold text-blue-700 mb-2">{feature.title}</h3>
+              <h3 className="text-xl font-semibold text-blue-700 mb-2 whitespace-nowrap">{feature.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
             </div>
           </div>
