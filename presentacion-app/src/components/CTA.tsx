@@ -8,7 +8,7 @@ const CTA = () => {
 
       {/* Botón de descarga */}
       <a 
-        href="/apks/IglesiaMMM-App.apk"  // Ruta correcta del APK dentro de la carpeta public
+        href="https://drive.google.com/file/d/1lGcMNRoYPUa49pw2rBI7WvXdGSO7uCXx/view?usp=drive_link"  // Ruta correcta del APK dentro de la carpeta public
         download="IglesiaMMM-App.apk"
         className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300"
       >
