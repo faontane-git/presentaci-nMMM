@@ -1,26 +1,29 @@
 import React from 'react';
+import primera from '../assets/primera.jpg';
+import segunda from '../assets/segunda.jpg';
+import tercera from '../assets/tercera.jpg';
 
 type Feature = {
   title: string;
   description: string;
+  image: string;
 };
 
 const features: Feature[] = [
   {
     title: 'Devocionales diarios',
     description: 'Recibe mensajes de inspiración y fortaleza espiritual cada día.',
+    image: primera,
   },
   {
     title: 'Calendario de cultos',
-    description: 'Consulta los horarios de cultos, reuniones y actividades especiales.',
+    description: 'Consulta los horarios de cultos, consejerías pastorales y actividades nacionales.',
+    image: segunda,
   },
   {
     title: 'Conexión con tu comunidad',
-    description: 'Comparte oraciones, noticias y mensajes con los miembros de tu iglesia.',
-  },
-  {
-    title: 'Pedidos de oración',
-    description: 'Envía y responde peticiones de oración para apoyarnos unos a otros en la fe.',
+    description: 'Recibe oraciones, noticias y mensajes.',
+    image: tercera,
   },
 ];
 
@@ -34,14 +37,23 @@ const Features = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto px-4">
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 p-6 text-left"
+            className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden flex flex-col items-center text-center"
           >
-            <h3 className="text-xl font-semibold text-blue-700 mb-3">{feature.title}</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+            <div className="w-full max-h-80 flex justify-center overflow-hidden bg-gray-100">
+              <img
+                src={feature.image}
+                alt={feature.title}
+                className="h-full w-auto object-contain"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-blue-700 mb-2">{feature.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+            </div>
           </div>
         ))}
       </div>
